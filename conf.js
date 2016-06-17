@@ -12,25 +12,25 @@
 
 exports.config = {
   framework: 'jasmine',
-  seleniumAddress: 'http://localhost:4444/wd/hub',
-	//sauceUser: process.env.SAUCE_USERNAME,
-	//sauceKey: process.env.SAUCE_ACCESS_KEY,
-	capabilities: {
-    browserName: 'chrome'
-  },
-	// multiCapabilities: [{
+  //seleniumAddress: 'http://localhost:4444/wd/hub',
+	sauceUser: process.env.SAUCE_USERNAME,
+	sauceKey: process.env.SAUCE_ACCESS_KEY,
+	// capabilities: {
+  //   browserName: 'chrome'
+  // },
+	multiCapabilities: [{
   //  browserName: 'firefox'
   //}, {
   //  browserName: 'chrome'
   //}, {
   //   browserName: 'phantomjs'
 	//}, {
-	// 	browserName: 'iphone',
-	// 	platform: 'OS X 10.9',
-	// 	version: '7.1',
-	// 	deviceName: 'iPad Retina (64-bit)',
-	// 	deviceOrientation: 'portrait'
-	// }],
+		browserName: 'iphone',
+		platform: 'OS X 10.9',
+		version: '7.1',
+		deviceName: 'iPad Retina (64-bit)',
+		deviceOrientation: 'portrait'
+	}],
   suites: {
 		//sample: ['sample-spec.js'],
 		//all: ['spec-*.js'],
